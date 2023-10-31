@@ -3,8 +3,8 @@
 
 /**
  * argstostr - concatenates arguments
- * @ac: 
- * @av: 
+ * @ac: argument count
+ * @av: argument array
  *
  * Return: pointer to new string, else NULL
  */
@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 			result[count] = av[i][j];
 			count++;
 		}
-		
+
 		if (result[count] == '\0')
 		{
 			result[count++] = '\n';
