@@ -2,11 +2,12 @@
 
 /**
  * printing - prints each char till empty element
- * @name - string containg chars
+ * @name: string containg chars
  */
 void printing(char *name)
 {
 	int i = 0;
+
 	while (*name != '\0')
 	{
 		_putchar(name[i]);
