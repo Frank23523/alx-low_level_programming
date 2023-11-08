@@ -21,10 +21,13 @@ void printing(char *name)
 {
 	int i = 0;
 
-	while (*name != '\0')
+	if (name != NULL)
 	{
-		_putchar(name[i]);
-		i++;
+		while (*name != '\0')
+		{
+			_putchar(name[i]);
+			i++;
+		}
 	}
 	_putchar('\n');
 }
