@@ -1,37 +1,5 @@
 #include "function_pointers.h"
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
- * printing - prints each char till empty element
- * @name: string containg chars
- */
-void printing(char *name)
-{
-	int i = 0;
-
-	if (name != NULL)
-	{
-		while (*name != '\0')
-		{
-			_putchar(name[i]);
-			i++;
-		}
-	}
-	_putchar('\n');
-}
-
+#include <stdio.h>
 
 /**
  * print_name - prints a name
@@ -40,6 +8,7 @@ void printing(char *name)
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL)
-		f(name);
+	if (name == NULL || f == NULL)
+		return;
+	f(name);
 }
