@@ -1,4 +1,3 @@
 *.c
 *.o
-liball.so
 100-tests.py
