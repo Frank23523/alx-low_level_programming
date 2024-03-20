@@ -2,3 +2,5 @@ m.h
 *.c
 *.o
 school
+__pycache__
+5-main.py
